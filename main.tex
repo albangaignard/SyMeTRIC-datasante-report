@@ -1,0 +1,135 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{xspace}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{soul}
+\usepackage{amsthm}
+\usepackage{awesomebox}
+
+\usepackage{tcolorbox}
+
+%\usepackage{sectsty}
+%\allsectionsfont{\sffamily}
+%\chapterfont{\color{blue}}  % sets colour of chapters
+%\sectionfont{\color{blue}}  % sets colour of sections
+
+\usepackage{comment}
+%\excludecomment{solution}
+\includecomment{solution}
+
+\usepackage{fancyhdr}
+\usepackage{makeidx}
+%\usepackage[pdftex]{graphicx} 
+%\DeclareGraphicsExtensions{.jpg,.mps,.pdf,.png}
+\usepackage{geometry}
+\geometry{lmargin=3cm, rmargin=3cm, tmargin=3cm, bmargin=4cm}
+
+\usepackage[xetex,colorlinks=true,urlcolor=magenta,pdfborder={0 0 0}]{hyperref}
+   
+\renewcommand{\familydefault}{\sfdefault}
+
+\title{\bf SyMeTRIC, un projet régional structurant pour le développement de la médecine systémique}
+\author{
+  Alban Gaignard, Jérémive Bourdon, Richard Redon \\(pour l'ensemble du Comité de Pilotage)
+  %{Alban Gaignard}, {\small \tt alban.gaignard@univ-nantes.fr}\\
+  %{Hala Skaf-Molli}, {\small \tt hala.skaf@univ-nantes.fr}
+}
+
+%\date{23 of November, 2017}
+\date{\today}
+%\date{November, 2018}
+
+%\renewcommand{\headrulewidth}{0.2pt}
+%\renewcommand{\footrulewidth}{0.2pt}
+%\renewcommand{\sectionmark}[1]{\markright{#1}}
+%\renewcommand{\sectionmark}[1]{\markright{\thesection{} #1}}
+
+\usepackage{color}
+\usepackage{listings}
+\definecolor{hellgelb}{rgb}{0.95,0.95,1}
+\definecolor{colKeys}{rgb}{0,0,1}
+\definecolor{colIdentifier}{rgb}{0,0,0}
+\definecolor{colComments}{rgb}{1,0,0}
+\definecolor{colString}{rgb}{0,0.5,0}
+
+\lstset{%
+float=hbp,%
+basicstyle=\ttfamily\small, %
+identifierstyle=\color{colIdentifier}, %
+keywordstyle=\color{colKeys}, %
+stringstyle=\color{colString}, %
+commentstyle=\color{colComments}, %
+columns=flexible, %
+tabsize=2, %
+frame=single, %
+extendedchars=true, %
+showspaces=false, %
+showstringspaces=false, %
+numbers=left, %
+numberstyle=\tiny, %
+breaklines=true, %
+backgroundcolor=\color{hellgelb}, %
+breakautoindent=true, %
+captionpos=b%
+}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{3mm}
+
+\theoremstyle{definition}
+\newtheorem{ex}{Question}
+
+\fancyhf{}
+
+\begin{document}
+\parindent=0pt
+\thispagestyle{empty}
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemiii}{$\diamond$}
+
+%\pagestyle{fancy}
+%\lhead[\textbf{\thepage}]{\textsl{\leftmark}}
+%\rhead[\textsl{\rightmark}]{\textbf{\thepage}}
+
+\maketitle 
+
+\begin{tcolorbox}
+\textbf{Points clés.} 
+{\small La médecine systémique est une approche comparable à la biologie des systèmes. Elle vise à intégrer différentes sources d’information pour construire et valider des modèles et marqueurs bio-pathologiques, permettant d’anticiper et d’améliorer la prise en charge et le suivi des patients (diagnostic, prédiction de réponse aux traitements, pronostic).  Cette approche nouvelle de la médecine, multi-disciplinaire, s’appuie fortement sur les sciences et technologies du numérique pour mieux exploiter la production massive de données biomédicales hétérogènes. }
+    \begin{itemize}
+        \item 
+        \item publications 
+        \item succès à l'appel à projet NeXT
+        \item différents GTs : Madics ReproVirtuFlow, 
+    \end{itemize}
+\end{tcolorbox}
+%\tableofcontents \clearpage
+
+\section{Données massive et Médecine Systémique}
+Le projet européen CASyM~\cite{} a récemment publié une feuille de route pour le développement de la médecine systémique. Cette feuille de route identifie comme prioritaire le développement de projets “démonstrateurs” (preuves de concept), ainsi que les initiatives favorisant l’accès, la standardisation et le partage de données. Elle met l’accent sur l’importance de la documentation, au moyen de métadonnées descriptives et de référentiels sémantiques communs, des étapes de collecte de données, d’analyse de données, et de modélisation. Elle souligne également la nécessité de mettre en place des infrastructures matérielles et logicielles inter-opérables, nécessaires au développement d’une recherche collaborative multi-disciplinaire, et bien souvent multi-centrique.
+
+Ces priorités s'inscrivent également dans un cadre plus général où les organismes financeurs de la recherche incitent très fortement à la publication à la fois des méthodes et des résultats de recherche (publications scientifiques en open access) et des données collectées et produites (H2020 data management plan).
+
+A l’échelle des hôpitaux, des projets colossaux voient le jour pour mettre en place une gestion numérique des informations de soin. Bien que les activités de recherche clinique soient associées à ces projets, les besoins de la recherche académique, en terme d’accès aux données, sont trop souvent sous-évalués, limitant ainsi les perspectives de transfert vers la clinique des résultats de recherche.
+
+A l’échelle des collectivités locales, de nombreuses initiatives ont émergé pour ouvrir et faciliter l’accès aux données publiques, au travers de portails open data. Les données sont souvent publiées sous la forme de fichiers bruts. Cependant, leur exploitation et plus précisément leur croisement avec d’autres sources de données nécessite de bien comprendre la nature et la structure de ces données. Des méta-données descriptives, permettant de diffuser les “clés de lecture” des données brutes, constitueraient une avancée majeure.
+
+\section{Le projet régional SyMeTRIC}
+SyMeTRIC est un projet de fédération régional en médecine systémique soutenu financièrement par la région Pays de la Loire depuis septembre 2014, porté par Richard Redon (Directeur de Recherche INSERM à l’Institut du Thorax) et Jérémie Bourdon (maître de conférences à l’Université de Nantes et chercheur au LS2N). SyMeTRIC implique aujourd'hui les équipes de recherche et de soin de l’Institut de Cancérologie de l’Ouest (ICO), de l’Université de Nantes, de l’Universités d’Angers, du CHU de Nantes et du CHU d’Angers. 
+
+Dans un premier temps, le projet vise à démontrer les complémentarités des différents acteurs régionaux, chercheurs (sciences de la vie et du numérique), cliniciens, et industriels, pour apporter des solutions efficaces et mutualisées d'analyse de données à grande échelle, d'intégration et de partage de données biomédicale. A plus long terme, SyMeTRIC vise à structurer les compétences et moyens régionaux au service du développement de la médecine systémique dans le cadre de différents champs pathologiques : la cancérologie et la transplantation - en lien avec le DHU OncoGreffe et le FHU GOAL ou encore les maladies chroniques cardio-vasculaires et respiratoires - en lien avec le DHU 2020 ``Médecine personnalisée des maladies chroniques''. 
+
+Au delà de la thématique santé, ce projet permettra de développer des collaborations étroites en sciences des données et mathématiques : modélisation de processus biologiques, fouille de données et apprentissage, intelligence artificielle (représentation des connaissances, raisonnement), systèmes distribués et cloud computing (usage, sécurité, efficacité énergétique, passage à l’échelle), etc. 
+
+\section{Vers une plateforme de recherche sur les données et modèles bio-médicaux}
+A court terme le projet vise à développer deux démonstrateurs. Le premier s’intéresse aux standards et technologies du web sémantique pour interroger et croiser des données hétérogènes à partir de terminologies de références. Le second s’intéresse au partage de méthodes bio-informatiques en séquençage nouvelle génération, en s’appuyant sur un portail web d’analyses de données (Galaxy) et un centre de calcul hautes-performances. 
+
+A partir de ces démonstrateurs, SyMeTRIC vise à constituer une plateforme commune de services, d’appui et d’expérimentation en médecine systémique. Trois axes de travail ont été identifiés : 
+
+Intégration de données : développer des méthodes et outils facilitant l’exploitation conjointe i) de données de recherche et de données de soin (en lien avec le projet Ulysse du CHU de Nantes) et ii) de données de recherche et de données publiques (bases médico-administratives, bases publiques Linked Open Data) ; 
+Analyse de données : publier des méthodes d’analyse de données sous la forme de workflows accessibles et exécutables depuis un portail web unique, et instrumenter ces workflows pour documenter automatiquement les données produites (provenance, terminologies de références) ; 
+Infrastructure cloud : développer des outils bio-informatiques indépendant des environnements matériels et logiciels (virtualisation) pour qu’ils puissent s’exécuter au plus proche des données. 
+
+SyMeTRIC permettra ainsi de structurer un réseau de compétences et de fédérer des infrastructures technologiques distribuées sur le territoire, dédiées à l’intégration/analyse de données biomédicales et à la modélisation de processus biologiques. Cette plateforme permettra d’accélérer la découverte et la validation in silico de marqueurs et modèles bio-pathologiques et constituera une avancée majeure pour relever les défis de la médecine de demain, prédictive, préventive et personnalisée. 
+
+\end{document}
