@@ -1,32 +1,35 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,10pt]{article}
 \usepackage{xspace}
 \usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
 \usepackage{enumitem}
 \usepackage{soul}
 \usepackage{amsthm}
-\usepackage{awesomebox}
+%\usepackage{awesomebox}
 
 \usepackage{tcolorbox}
 
 %\usepackage{sectsty}
 %\allsectionsfont{\sffamily}
 %\chapterfont{\color{blue}}  % sets colour of chapters
-%\sectionfont{\color{blue}}  % sets colour of sections
+%\sectionfont{\bf \sf \color{blue}}  % sets colour of sections
 
-\usepackage{comment}
+%\usepackage{comment}
 %\excludecomment{solution}
-\includecomment{solution}
+%\includecomment{solution}
 
 \usepackage{fancyhdr}
 \usepackage{makeidx}
 %\usepackage[pdftex]{graphicx} 
 %\DeclareGraphicsExtensions{.jpg,.mps,.pdf,.png}
-\usepackage{geometry}
-\geometry{lmargin=3cm, rmargin=3cm, tmargin=3cm, bmargin=4cm}
 
-\usepackage[xetex,colorlinks=true,urlcolor=magenta,pdfborder={0 0 0}]{hyperref}
+%\usepackage{geometry}
+%\geometry{lmargin=3cm, rmargin=3cm, tmargin=3cm, bmargin=4cm}
+
+\usepackage[colorlinks=false,urlcolor=magenta,pdfborder={0 0 0}]{hyperref}
    
-\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand{\familydefault}{\sfdefault}
 
 \title{\bf SyMeTRIC, un projet régional structurant pour le développement de la médecine systémique}
 \author{
@@ -105,66 +108,64 @@ captionpos=b%
 %\end{tcolorbox}
 %\tableofcontents \clearpage
 
-\section{Données massive et Médecine Systémique : quelques enjeux} 
-Le projet européen CASyM~\cite{XX} a proposé une feuille de route pour le développement de la médecine systémique. Cette feuille de route identifie comme prioritaire le développement de projets “démonstrateurs” (preuves de concept), ainsi que les initiatives favorisant l’accès, la standardisation et le partage de données. Elle met l’accent sur l’importance de la documentation, au moyen de métadonnées descriptives et de référentiels sémantiques communs, des étapes de collecte de données, d’analyse de données, et de modélisation. Elle souligne également la nécessité de mettre en place des infrastructures matérielles et logicielles inter-opérables, nécessaires au développement d’une recherche collaborative multi-disciplinaire, et bien souvent multi-centrique. 
+\section{Données massives et Médecine Systémique : quelques enjeux} 
 
-Ces priorités s'inscrivent également dans un cadre plus général où les organismes financeurs de la recherche incitent très fortement à la publication à la fois des méthodes, des résultats (publications scientifiques en open access) et des données collectées et produites dans le cadre de la recherche (H2020 data management plan). 
+La disponibilité des technologies de séquençage à haut débit a donné lieu à une explosion du volume de données génomiques. \cite{bigdata} montre que la croissance réelle de ces volumes dépasse largement les estimations des constructeurs d'équipement de séquençage en 2016. En 2019, une seul laboratoire de biologie sera en mesure de produire en une année, de l'ordre de 1000 génomes complets, ce qui correspond à la capacité mondiale de production de génomes à l'échelle mondiale en 2012. 
 
-TODO~\cite{bigdata}
+Cependant les récents progrès de la médecine ne peuvent se réduire au ``tout génomique''. La médecine de demain, aussi dite systémique (par analogie à la Biologie des Systèmes), nécessite l'exploitation conjointe de données d'observation à différentes échelles du vivant (gènes, cellules, organes, organismes, individus, populations), afin de développer des modèles plus fin de compréhension et de prédiction. Le développement de cette Médecine Systémique est largement conditionné par le développement de nouvelles méthodes d'analyse et de modélisation à partir de ces masses de données, tout en s'assurant de la pertinence et de la reproductibilité de ces démarches scientifiques ``dirigées par les données''. 
 
-TODO FAIR DATA~\cite{wilkinson2016fair}
+Le projet européen CASyM a proposé une feuille de route\footnote{\url{https://www.casym.eu/lw_resource/datapool/_items/item_328/roadmap_1.0.pdf}} pour le dévelop\-pement de la médecine systémique. Cette feuille de route identifie comme prioritaire le développement de projets “démonstrateurs” (preuves de concept), ainsi que les initiatives favorisant l’accès, la standardisation et le partage de données. Elle met l’accent sur l’importance de la documentation, au moyen de métadonnées descriptives et de référentiels sémantiques communs, des étapes de collecte de données, d’analyse de données, et de modélisation. Elle souligne également la nécessité de mettre en place des infrastructures matérielles et logicielles inter-opérables, nécessaires au développement d’une recherche collaborative multi-disciplinaire, et bien souvent multi-centrique. Ces priorités s'inscrivent également dans un cadre plus général où les communautés et institutions de la recherche incitent très fortement à la publication et réutilisation, à la fois des méthodes, des résultats (publications scientifiques en open access) et des données collectées/produites dans le cadre de la recherche~\cite{wilkinson2016fair}. 
 
-{\bf complexité des algorithmes, boites noires} \\
-{\bf reproductibilité en sciences biomédicales} 
-
-
-
-%A l’échelle des hôpitaux, des projets colossaux voient le jour pour mettre en place une gestion numérique des informations de soin. Bien que les activités de recherche clinique soient associées à ces projets, les besoins de la recherche académique, en terme d’accès aux données, sont trop souvent sous-évalués, limitant ainsi les perspectives de transfert vers la clinique des résultats de recherche. 
-
-%A l’échelle des collectivités locales, de nombreuses initiatives ont émergé pour ouvrir et faciliter l’accès aux données publiques, au travers de portails open data. Les données sont souvent publiées sous la forme de fichiers bruts. Cependant, leur exploitation et plus précisément leur croisement avec d’autres sources de données nécessite de bien comprendre la nature et la structure de ces données. Des méta-données descriptives, permettant de diffuser les “clés de lecture” des données brutes, constitueraient une avancée majeure.
-
-\section{Le projet régional SyMeTRIC}
+\section{SyMeTRIC}
 SyMeTRIC est un projet régional structurant pour le développement de la médecine systémique, soutenu financièrement par la Région Pays de la Loire. et impliquant les équipes de recherche et de soin de l’Institut de Cancérologie de l’Ouest (ICO), de l’Université de Nantes, de l’Universités d’Angers, du CHU de Nantes et du CHU d’Angers. L'objectif de SyMeTRIC est de démontrer les complémentarités des différents acteurs régionaux, chercheurs (sciences de la vie et du numérique), cliniciens, et industriels, pour apporter des solutions efficaces et mutualisées d'intégration, et de réutilisation, et d'analyse de données à grande échelle. 
 
 \begin{tcolorbox}
-SyMeTRIC s'articule autour de trois axes : (A1) partage d'{\bf infrastructures} de calcul, (A2) partage d'{\bf algorithmes} d'analyse de données "omiques", et (A3) intégration et partage de {\bf données} en sciences de la vie. 
+SyMeTRIC s'articule autour de trois axes : 
+\begin{itemize}
+	\item (A1) partage d'{\bf infrastructures} de calcul,
+	\item (A2) partage d'{\bf algorithmes} d'analyse de données "omiques",
+	\item (A3) intégration et partage de {\bf données} en sciences de la vie. 
+\end{itemize}
 \end{tcolorbox}
-
-%porté par Richard Redon (Directeur de Recherche INSERM à l’Institut du Thorax) et Jérémie Bourdon (maître de conférences à l’Université de Nantes et chercheur au LS2N). SyMeTRIC implique aujourd'hui les équipes de recherche et de soin de l’Institut de Cancérologie de l’Ouest (ICO), de l’Université de Nantes, de l’Universités d’Angers, du CHU de Nantes et du CHU d’Angers. 
-
-%Dans un premier temps, le projet vise à démontrer les complémentarités des différents acteurs régionaux, chercheurs (sciences de la vie et du numérique), cliniciens, et industriels, pour apporter des solutions efficaces et mutualisées d'analyse de données à grande échelle, d'intégration et de partage de données biomédicale. A plus long terme, SyMeTRIC vise à structurer les compétences et moyens régionaux au service du développement de la médecine systémique dans le cadre de différents champs pathologiques : la cancérologie et la transplantation - en lien avec le DHU OncoGreffe et le FHU GOAL ou encore les maladies chroniques cardio-vasculaires et respiratoires - en lien avec le DHU 2020 ``Médecine personnalisée des maladies chroniques''. 
-
-%Au delà de la thématique santé, ce projet permettra de développer des collaborations étroites en sciences des données et mathématiques : modélisation de processus biologiques, fouille de données et apprentissage, intelligence artificielle (représentation des connaissances, raisonnement), systèmes distribués et cloud computing (usage, sécurité, efficacité énergétique, passage à l’échelle), etc. 
 
 \section{Résultats}
 \subsection{Partage d'infrastructures de calcul}
-Les sciences de la vie mobilisent aujourd'hui de multiples équipements pour observer ou révéler des phénomènes biologiques à différentes échelles du vivant (séquençage de l'ADN, imagerie des tissus, des organes, etc.). Les volumes de données produits sont considérables et le déplacement de ces données en vue de l'analyse devient problématique pour des raisons à la fois techniques, les réseaux ne peuvent absorber un tel volume, mais également organisationnelles, les compétences d'analyse ne se situent pas toujours sur le site de production de ces données ou bien les données sont sensibles et non déplaçables. La re-localisation des algorithmes d'analyse au plus proche des données peut répondre à la difficulté technique de déplacement des données, mais également aux enjeux de protection de données à caractère personnelle. Cette re-localisation peut également permettre de reproduire une analyse de données, à condition que l'on soit capable de contrôler finement les conditions expérimentales, c'est à dire l'ensemble des composants logiciels exécutant le ou les algorithmes. 
+Les sciences de la vie mobilisent aujourd'hui de multiples équipements pour observer ou révéler des phénomènes biologiques à différentes échelles du vivant (séquençage de l'ADN, imagerie des tissus, des organes, etc.). Les volumes de données produits sont considérables~\cite{bigdata} et le déplacement de ces données en vue de l'analyse devient problématique pour des raisons à la fois techniques, les réseaux ne peuvent absorber un tel volume, mais également organisationnelles, les compétences d'analyse ne se situent pas toujours sur le site de production de ces données ou bien les données sont sensibles et non déplaçables. La re-localisation des algorithmes d'analyse au plus proche des données peut répondre à la difficulté technique de déplacement des données, mais également aux enjeux de protection de données à caractère personnelle. Cette re-localisation peut également permettre de reproduire une analyse de données, à condition que l'on soit capable de contrôler finement les ``conditions expérimentales'', c'est à dire l'ensemble des composants logiciels exécutant le ou les algorithmes. 
 
 Nous nous sommes appuyé sur les technologies de ``cloud computing'' pour homogénéiser l'accès à aux serveurs de calculs distribués sur le territoire, entre la plateforme de bioinformatique BiRD (Nantes) et le LERIA (Angers). L'idée est de pouvoir figer toutes les couches d'un environnement logiciel, du système d'exploitation aux algorithmes d'analyse de données, au sein d'une ``machine virtuelle''. Cette machine virtuelle peut ainsi être exécutée, déplacée, dupliquée, sur de multiples infrastructures de calcul. 
 
-Dans le cadre d'un stage de Master 2 en informatique~\cite{refPatient} nous avons pu expérimenter (1) l'impact de ces technologies de cloud computing sur les performances des analyses de données en bioinformatique, et (2) étudier des scénarios de placement automatique de machines virtuelles au plus proche des données dans le cadre d'une étude multi-centrique. Par exemple, on considère un site de production de données omiques brutes et un site de recherche en biologie. Pour éviter de transférer les volumes considérables de séquences "omiques", l'analyse primaire primaire est réalisée au plus proche du séquenceur (site 1), et l'analyse secondaire est réalisée dans le laboratoire de recherche (site 2).
+Dans le cadre d'un stage de Master 2 en informatique~\cite{refPatient} nous avons pu expé\-ri\-men\-ter (1) l'impact de ces technologies de cloud computing sur les performances des analyses de données en bioinformatique, et (2) étudier des scénarios de placement automatique de machines virtuelles au plus proche des données dans le cadre d'une étude multi-centrique. Par exemple, on considère un site de production de données omiques brutes et un site de recherche en biologie. Pour éviter de transférer les volumes considérables de séquences ``omiques'', l'analyse primaire primaire est réalisée au plus proche du séquenceur (site 1), et l'analyse secondaire est réalisée dans le laboratoire de recherche (site 2).
 
 Cette infrastructure de calcul ``cloud'' fait partie des 6 plate-formes nationales qui constituent le cloud fédéré français de bioinformatique. Ce cloud permet de répartir la charge d'analyses bioinformatiques à l'échelle du territoire. 
 
-\subsection{Partage d'algorithmes}
-Même s'il n'est pas nécessaire de savoir concevoir et programmer un algorithme, la conduite d'analyses de données en bioinformatique nécessite des compétences élémentaires en informatique. C'est souvent un frein à la prise en main des outils d'analyse par les biologistes ou cliniciens. ...
+\subsection{Partage d'algorithmes}\label{sec:wp2}
+Même s'il n'est pas nécessaire de savoir concevoir ou programmer un algorithme, la conduite d'analyses de données en bioinformatique nécessite des compétences élémentaires en informatique. Il faut par exemple maitriser suffisamment le système d'exploitation Linux, pour installer les dépendances logicielles, voire compiler un logiciel d'analyse de données à partir de son code source, forme sous laquelle sont souvent mis à disposition les logiciels dits ``open source'' implémentant les algorithmes d'analyse. Il faut également être en mesure d'automatiser les analyse pour un grand nombre d'échantillons, en s'appuyant au besoin sur un environnement de calcul hautes performance (``cluster'' ou ``cloud computing''). Ces compétences élémentaires en informatique sont souvent un frein à la prise en main des outils et à l'interprétation des résultats d'analyse par les biologistes ou cliniciens. 
+
+Nous nous sommes appuyé sur la notion de {\em workflow} scientifique~\cite{fgcs-workflows-17} pour spécifier, échanger, et standardiser des analyses de données biomédicales. Les environnements de workflow scientifiques fournissent {\em (i)} un niveau d'abstraction sup\-plé\-men\-taire, sous la forme d'un langage, pour spécifier et partager les méthodes d'analyses, tout en les découplant des environnements techniques de calcul (réduction de la complexité), {\em (ii)} une interface entre scientifiques spécialistes d'un domaine et infrastructures de calcul pour reproduire une analyse de données à grande échelle (automatisation), et {\em (iii)} la possibilité de capturer des informations de provenance au cours de l'analyse en vue de fournir des éléments de transparence et de confiance sur les données produites par les algorithmes. 
+
+Nous nous sommes focalisé dans SyMeTRIC sur la standardisation et le partage de méthodes d'analyse de données génomiques, en particulier sur les méthodes liées à la transcriptomique (RNAseq). L'idée principale était de rendre accessible via un navigateur web, les méthodes (algorithmes) les plus communes d’analyse de données d’expression de gènes en vue de leur réutilisation dans l'étude de différentes pathologies. Simon Souchet a proposé des workflows pour la quantification de transcrits (ARN), la détection et l'analyse de variants et la détection de transcrits de fusion. L'implémentation de ces analyses sous la forme de {\em workflow} a permis de standardiser et reproduire les mêmes méthodes entre les CHU d'Angers et de Nantes sur des données de nature différente dans le cadre de l'étude des leucémies aiguës myéloïdes et du myélome multiple.  
+
+Parallèlement, nous avons mené des travaux de recherche sur la capture et l'exploitation d'informations de provenance associées à l'exécution de workflows scientifiques~\cite{tapp16, eswc17}. Dans un soucis de reproductibilité, l'objectif est de ces travaux est de produire automatiquement des métadonnées résumant une expérience computationnelle. Ces métadonnées permettent d'associer aux données produites, le contexte et les hypothèses biologiques à l'origine des analyses de données massives. Ces métadonnées permettent également de plus facilement hiérarchiser et interpréter l'information consommée et produite au cours d'une expérience. Enfin, elles facilitent l'exploitation algorithmique des résultats, leur réutilisation et leur potentiel partage au delà du cadre initial de l'étude. 
+
+Ces travaux ce sont également inscrit dans une démarche collective d'analyse de approches informatique pour mieux répondre aux enjeux de reproductibilité en sciences dirigées par les données~\cite{fgcs-repro-17}. 
 
 \subsection{Intégration et partage de données}
+
 \subsubsection{Données numériques : transcriptomique}
-\subsubsection{Données symboliques : réseaux d'interactions biologiques}
+De nombreuses méthodes existent pour quantifier des niveaux d'expression de gènes. Les méthodes les plus populaires consistent à {\em (i)} mesurer par imagerie des intensités de fluorescence de sondes sur une puce ({\em microarray}) ou {\em (ii)} séquencer et compter les séquences d'ARN d'un échantillon ({\em RNAseq}). Le développement des techniques de séquençage à haut débit a drastiquement réduit le coût de cette dernière technique, bien plus performante en termes de finesse d'analyse. Les technologies {\em microarray} vont apporter une réponse binaire pour un nombre connu de sondes, alors que les technologies {\em RNAseq} apporteront une réponse continue. De nombreux jeux de données de transcriptomique ont été quantifié en {\em microarray} et il n'est pas toujours souhaitable ou possible de re-analyser en RNAseq toute une série d'échantillons biologiques. Il est cependant crucial d'être en mesure d'analyser conjointement et donc d'intégrer des données de transcriptomique issues des deux technologies, dans le cadre d'études multi-centriques ou de méta-analyses par exemple. 
 
-\section{Perspectives}
+Dans le cadre de SyMeTRIC, Fadoua Ben Azzouz a identifié les méthodes bio-statistiques pertinentes pour normaliser et fusionner ces jeux de données. Ces méthodes ont été implémentées sous la forme de scripts et sous la forme de workflows (comme introduits dans la section~\ref{sec:wp2}) de telle sorte qu'elles puissent être réutilisées dans un autre cadre que la cancérologie. Ces méthodes ont été testées à la fois sur des jeux de données réelles -- lignées cellulaires portant sur le myélome multiple, et données patients issues du projet TCGA (The Cancer Genome Atlas) portant sur le cancer du sein -- et sur des données synthétiques. Un simulateur de données de transcriptomique a donc été proposé également sous la forme de script et de workflow accessible au travers d'une interface web Galaxy. 
+ 
+\subsubsection{Données symboliques : réseaux d'interactions biologiques} 
+Les données manipulées dans le cadre de la Médecine Systémique ne couvrent pas seulement des valeurs numériques. Il est parfois nécessaire de manipuler des données symboliques, pour représenter des objets complexes, définis sémantiquement par des concepts et des relations. Par exemple on s'intéresse dans le domaine de la Biologie des Systèmes aux interactions entre différents objects biologiques, en manipulant des réseaux de régulations de gènes ou bien encore des voies de signalisation biologiques. Ces réseaux sont primordiaux pour la conception et la simulation de modèles en Biologie des Systèmes. 
 
-%\section{Vers une plateforme de recherche sur les données et modèles bio-médicaux}
-%A court terme le projet vise à développer deux démonstrateurs. Le premier s’intéresse aux standards et technologies du web sémantique pour interroger et croiser des données hétérogènes à partir de terminologies de références. Le second s’intéresse au partage de méthodes bio-informatiques en séquençage nouvelle génération, en s’appuyant sur un portail web d’analyses de données (Galaxy) et un centre de calcul hautes-performances. 
-%
-%A partir de ces démonstrateurs, SyMeTRIC vise à constituer une plateforme commune de services, d’appui et d’expérimentation en médecine systémique. Trois axes de travail ont été identifiés : 
-%
-%Intégration de données : développer des méthodes et outils facilitant l’exploitation conjointe i) de données de recherche et de données de soin (en lien avec le projet Ulysse du CHU de Nantes) et ii) de données de recherche et de données publiques (bases médico-administratives, bases publiques Linked Open Data) ; 
-%Analyse de données : publier des méthodes d’analyse de données sous la forme de workflows accessibles et exécutables depuis un portail web unique, et instrumenter ces workflows pour documenter automatiquement les données produites (provenance, terminologies de références) ; 
-%Infrastructure cloud : développer des outils bio-informatiques indépendant des environnements matériels et logiciels (virtualisation) pour qu’ils puissent s’exécuter au plus proche des données. 
-%
-%SyMeTRIC permettra ainsi de structurer un réseau de compétences et de fédérer des infrastructures technologiques distribuées sur le territoire, dédiées à l’intégration/analyse de données biomédicales et à la modélisation de processus biologiques. Cette plateforme permettra d’accélérer la découverte et la validation in silico de marqueurs et modèles bio-pathologiques et constituera une avancée majeure pour relever les défis de la médecine de demain, prédictive, préventive et personnalisée. 
+Bien que de nombreuses bases de connaissances soient publiquement accessibles sur le web, la reconstruction de ces réseaux de régulation ou de signalisation requiert de très nombreuses et coûteuses opérations manuelles. Il faut par exemple réconcilier des schémas d'identification spécifiques à chacune des bases de données pour désigner la même entité biologique. Les vocabulaires et donc la sémantique des relations entre entités biologique diffère entre chacune des bases et n'est pas toujours explicite ce qui rend difficile l'interprétation logique de ces interactions biologiques. L'homogénéisation de ces multiples réseaux biologique est couteux et source d'erreur. 
+
+En s'appuyant sur les technologies du Web Sémantique, nous avons proposé dans SyMeTRIC un algorithme de reconstruction de réseaux de régulation et de signalisation dans le contexte de la croissance de cellules tumorales~\cite{jobim17}. Nous nous sommes appuyé sur l'ontologie BioPax pour la représentation logique des reactions biochimiques (activations, inhibitions, catalyses, etc.) et sur la base de données PathwayCommons. Le principe de l'algorithme est d'identifier des facteurs de transcription d'une liste de gènes d'intérêt et d'assembler pas-à-pas un réseaux de régulation ou de signalisation. Cette algorithme est disponible sous la forme de code informatique et également sous la forme d'une interface web permettant de visualiser les réseaux reconstruits. Couplé à d'autres bases de connaissances publiques comme apr exemple DrugBank pour les effet de molécules thérapeutiques, et des modèles probabilistes, cette approche permet d'identifier de potentielles cibles thérapeutiques. 
+
+\section{Conclusion}
+%{\em Question du partage des données en sciences de la vie.} \\
+%{\em Question de la confiance dans les données.}
 
 \bibliographystyle{unsrt}
 \bibliography{main.bib} % Use sample.bib as the bibliography
